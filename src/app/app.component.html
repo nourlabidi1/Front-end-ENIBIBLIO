@@ -1,0 +1,64 @@
+
+<div>
+    {{environment.email}}
+</div>
+
+
+<router-outlet></router-outlet>
+<nav *ngIf="!isHomePage() && !isuserpage()&& !isajouter()" class="navbar navbar-expand-lg navbar-light fixed-top py-1" >
+    
+    <div class="container px-2 px-lg-5">
+        <button class="btn"   (click)="goacceuil()" >  <img src="https://cdn-icons-png.flaticon.com/512/2038/2038116.png" style="width:230px;height:90px;" alt="..." /></button>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <ul class="nav">
+          
+            <li class="nav-item"><button class="btn" (click)="godescription()" style="color:#000080" href="#about">Description</button></li>
+            <li class="nav-item"><button class="btn" (click)="goinscri()" style="color:#000080" >Inscription</button></li>
+            <li class="nav-item"><button class="btn" (click)="goconnexion()" style="color:#000080" >Connexion</button></li>
+        
+        </ul>
+    </div>
+
+        
+
+    
+</nav>
+
+
+
+<nav *ngIf="isHomePageadmin()||isajouter()" class="navbar navbar-expand-lg navbar-light fixed-top py-1" >
+    
+    <div class="container px-2 px-lg-5">
+        <button class="btn"   (click)="gocompte()" >  <img src="https://img.freepik.com/vecteurs-libre/concentre-minuscules-personnes-lisant-livres_74855-5836.jpg?w=996&t=st=1682266521~exp=1682267121~hmac=745840d8d6f4823a3acb0ff8540d2c46c49239b554920e6e1fb344cfd7323f0f" style="width:230px;height:90px;" alt="..." /></button>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <ul class="nav">
+          
+            <li class="nav-item"><button class="btn" (click)="gobibliotheque()" style="color:#000080" href="#about">Ma bibliothéque</button></li>
+            <li class="nav-item"><button class="btn" (click)="goajoutlivre()" style="color:#000080" >Ajouter des livres</button></li>
+            <li class="nav-item"><button class="btn" (click)="gobibliotheques()" style="color:#000080" >Autres Bibliotheques</button></li>
+            <li class="nav-item"><button class="btn" (click)="gocompte()" style="color:#000080" >Mon compte</button></li>
+            <li class="nav-item"><button class="btn" (click)="goconnexion()" style="color:#000080"href="#contact">Deconnecter</button></li>
+        
+        </ul>
+    </div></nav>
+
+
+<nav *ngIf="isHomePageuser() ||isuserpage()" class="navbar navbar-expand-lg navbar-light fixed-top py-1" >
+    
+    <div class="container px-2 px-lg-5">
+        <button class="btn"   (click)="gocompte()" >  <img src="https://img.freepik.com/vecteurs-libre/concentre-minuscules-personnes-lisant-livres_74855-5836.jpg?w=996&t=st=1682266521~exp=1682267121~hmac=745840d8d6f4823a3acb0ff8540d2c46c49239b554920e6e1fb344cfd7323f0f" style="width:300px;height:110px;" alt="..." /></button>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <ul class="nav">
+          
+            <li class="nav-item"><button class="btn" (click)="gobibliotheques()" style="color:#000080" href="#about">Bibliothéques</button></li>
+ 
+            <li class="nav-item"><button class="btn" (click)="goemprunt()" style="color:#000080" >Mes emprunts</button></li>
+
+            <li class="nav-item"><button class="btn" (click)="gocompte()" style="color:#000080" >Mon compte</button></li>
+            <li class="nav-item"><button class="btn" (click)="goconnexion()"style="color:#000080"href="#contact">Deconnecter</button></li>
+        
+        </ul>
+    </div></nav>
+
+
+   

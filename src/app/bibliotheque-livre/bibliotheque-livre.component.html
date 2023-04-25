@@ -1,0 +1,37 @@
+<div class="container" style="color:#000080" >
+    <div class="row">
+        <div class="container px-4 px-lg-5">
+            
+            </div> <br> <br> <br> <br> <br> <br> <br>
+        <div *ngFor="let Livre of Livres" class="col-md-6 col-xl-3" >
+            <div class="card m-b-30" style="background-color:#F0F8FF">
+                <div class="card-body row" >
+                    <div class="col-6">
+                        <a href=""><img src={{Livre.urlImage}} alt="" class="img-fluid rounded-circle w-60"></a>
+                    </div>
+                    <div class="col-6 card-title align-self-center mb-0">
+                        <h5>{{Livre.nomDuLivre}}</h5>
+                       
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush" style="background-color:#F0F8FF" >
+                    <li class="list-group-item">Description:{{Livre.description}}</li>
+                    <li class="list-group-item">Theme:{{Livre.theme}}</li>
+                    <li class="list-group-item">  Nom de l'auteur :{{Livre.nomAuteur}}</li>
+              
+
+                      
+       
+                </ul>
+                
+                <div class="card-body" style="background-color:#F0F8FF">
+                    <ul class="list-group list-group-flush" style="background-color:#F0F8FF" >
+                    <li class="list-group-item"> date début d'empunt <input type="date" name="dateDebut" #dateDebut></li>
+                    <li class="list-group-item">   date fin d'empunt<input type="date" name="dateFin" #dateFin ></li>
+                </ul>
+
+                    <button (click)="onEmprunter(Livre,dateDebut.value,dateFin.value)">Emprunter</button>
+                    <br> 
+                </div>
+            </div>
+        </div></div></div>

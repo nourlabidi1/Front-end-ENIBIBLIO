@@ -1,0 +1,26 @@
+body{
+	
+
+	background: linear-gradient(to bottom, #3166c7, #f5f5f9, #c2c2d9);
+}
+button{
+	width: 20%;
+	height: 30%;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #353578;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+button:hover{
+	background:  #212133;
+	color: #fff;
+}

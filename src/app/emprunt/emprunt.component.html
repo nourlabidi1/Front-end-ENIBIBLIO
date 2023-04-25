@@ -1,0 +1,33 @@
+
+<div id="bod">
+    <div id="bch">
+    <br><br><br><br><br><br><br><br><br>
+    <div class="container" style="color:#000080" >
+        <div class="row">
+            <div class="container px-4 px-lg-5">
+               
+               </div> <br> <br> <br> <br> <br> <br> <br>
+               <div class="container" style="color:#000080" >
+                <div class="row">
+                    <div class="container px-4 px-lg-5">
+                        <h2 class="text-center mt-0">Mes Emprunt</h2>
+                        <hr class="divider" /></div> <br> <br> <br> <br> <br> <br> <br>
+                    <div *ngFor="let emprunt of emprunts" class="col-md-6 col-xl-3" >
+                        <div class="card m-b-30" style="background-color:#F0F8FF">
+                            <div class="card-body row" >
+                                <div class="col-6 card-title align-self-center mb-0">
+                                    <h5>{{emprunt.livre.nomDuLivre}}</h5>
+                                   
+                                </div>
+                            </div>
+                            <ul class="list-group list-group-flush" style="background-color:#F0F8FF" >
+                                <li class="list-group-item">Date Debut :{{emprunt.dateDebut|date:'mediumDate'}} </li>
+                                <li class="list-group-item">Date Fin :{{emprunt.dateFin|date:'mediumDate'}}:</li>
+         
+                            </ul>
+
+                           
+                        </div>
+                    </div>
+                </div>
+            </div></div></div>

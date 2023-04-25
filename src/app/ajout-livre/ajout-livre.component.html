@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<div class="main">  
+    	 
+		<input type="checkbox" id="chk" aria-hidden="true">
+   
+			<div class="signup">
+        
+        <form (ngSubmit) = "onSubmit()"> 
+          <label style="color:#1e1e4d;" for="chk" aria-hidden="true">Ajouter Livre</label>
+            
+              <input id="nomDuLivre" [(ngModel)] = "livre.nomDuLivre" name = "nomDuLivre" class="form-control" type="text"  placeholder="Entrer nom du livre" >
+              <input id="nomAuteur" [(ngModel)] = "livre.nomAuteur" name = "nomAuteur" class="form-control" type="text"  placeholder="Entrer nom de l'auteur" >
+              <input id="description" [(ngModel)] = "livre.description" name = "description" class="form-control" type="text"  placeholder="Entrer la description" >        
+              <input id="theme" [(ngModel)] = "livre.theme" class="form-control" type="text" name="theme" placeholder="Entrer le theme">
+              <input id="urlImage" [(ngModel)] = "livre.urlImage" name = "urlImage" class="form-control" type="text"  placeholder="Entrer l'urlImage" >
+           
+       
+      </form>
+    </div>
+
+      <div class="login">
+				
+
+					<button type="submit" (click)="ajouterLivre()">Valider</button>
+				
+			</div>
+    </div>
+</body>
+</html>
